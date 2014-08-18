@@ -1,0 +1,26 @@
+{
+  "name": "Splunkd AutoRefresh",
+  "manifest_version": 2,
+  "version": "0.0.2",
+  "description": "Splunkd Auto Refresh",
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*", "*://splunk.homedepot.com/*"],
+      "js": ["contentscript.js"]
+    }
+  ],
+  "background": {
+    "scripts": ["background.js"]
+  },
+
+
+	"permissions":[
+	"storage",
+  "http://*/*", "https://*/*",
+  "tabs"
+	],
+
+  "browser_action": {
+    "default_icon": "icon.png"
+  }
+}
